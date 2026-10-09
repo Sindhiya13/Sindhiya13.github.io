@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Sindhiya A — QA Engineer portfolio. Manual testing, Selenium, Python, Pytest, API testing and automation projects.">
+<title>Sindhiya A | Quality Engineering Portfolio</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap');
+:root{--bg:#080d18;--panel:#101827;--panel2:#131e30;--line:#24344b;--text:#eef4ff;--muted:#9aacc5;--mint:#63f5c8;--blue:#7aa7ff;--purple:#b5a0ff;--orange:#ffbf7b}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:90px}body{margin:0;background:var(--bg);color:var(--text);font-family:Manrope,system-ui,sans-serif;line-height:1.65}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;z-index:-1;background:radial-gradient(ellipse at 12% 0%,rgba(67,109,204,.18),transparent 40%),radial-gradient(ellipse at 90% 30%,rgba(58,220,177,.08),transparent 34%)}
+a{color:inherit;text-decoration:none}a:hover{color:var(--mint)}.wrap{width:min(1120px,92%);margin:auto}
+header{position:sticky;top:0;z-index:20;background:rgba(8,13,24,.86);backdrop-filter:blur(18px);border-bottom:1px solid rgba(125,155,197,.16)}
+nav{min-height:72px;display:flex;align-items:center;justify-content:space-between;gap:24px}.logo{font-weight:800;letter-spacing:-.04em;font-size:1.05rem}.logo b{color:var(--mint)}.navlinks{display:flex;gap:24px;flex-wrap:wrap;font-size:.82rem;color:var(--muted)}.navlinks a:hover{color:var(--mint)}
+.mono{font-family:"DM Mono",monospace;letter-spacing:.02em}.eyebrow{font:500 .76rem "DM Mono",monospace;text-transform:uppercase;letter-spacing:.13em;color:var(--mint);display:flex;align-items:center;gap:10px}.eyebrow:before{content:"";width:24px;height:1px;background:var(--mint)}
+.hero{padding:82px 0 65px}.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:55px;align-items:center}.hero h1{font-size:clamp(2.8rem,6vw,5rem);line-height:1.02;letter-spacing:-.075em;margin:18px 0 16px}.hero h1 span{color:var(--mint)}.role{font-size:1.12rem;font-weight:700;margin:0 0 14px}.intro{color:var(--muted);max-width:650px;font-size:1rem}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:27px}.btn{display:inline-flex;align-items:center;gap:9px;padding:12px 17px;border:1px solid var(--line);border-radius:8px;font-weight:800;font-size:.88rem;transition:transform .2s,border-color .2s}.btn:hover{transform:translateY(-2px);text-decoration:none;border-color:var(--mint)}.btn.primary{background:var(--mint);border-color:var(--mint);color:#06130f}.btn.ghost{background:rgba(255,255,255,.025)}
+.status{display:inline-flex;align-items:center;gap:9px;border:1px solid #28584e;background:rgba(99,245,200,.06);border-radius:100px;padding:7px 12px;color:#b6ffe9;font-size:.75rem;font-family:"DM Mono",monospace}.pulse{width:7px;height:7px;background:var(--mint);border-radius:50%;box-shadow:0 0 0 4px rgba(99,245,200,.1)}
+.terminal{border:1px solid #2b3d55;border-radius:14px;overflow:hidden;background:rgba(16,24,39,.88);box-shadow:0 30px 90px rgba(0,0,0,.28);transform:rotate(1deg)}.terminal-head{height:44px;display:flex;align-items:center;gap:7px;padding:0 15px;border-bottom:1px solid var(--line);color:var(--muted);font: .72rem "DM Mono",monospace}.dot{width:8px;height:8px;border-radius:50%;background:#53647a}.terminal-body{padding:22px;font: .8rem/2 "DM Mono",monospace;color:#c2d2e8}.prompt{color:var(--mint)}.ok{color:var(--mint)}.key{color:var(--purple)}.value{color:var(--orange)}.terminal-note{border-top:1px solid var(--line);padding:13px 22px;color:var(--muted);font-size:.75rem}
+.metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:34px}.metric{padding:15px;border:1px solid var(--line);border-radius:10px;background:rgba(255,255,255,.025)}.metric strong{display:block;font-size:1.1rem;color:var(--mint)}.metric span{font-size:.72rem;color:var(--muted)}
+section{padding:42px 0}.section-top{display:flex;justify-content:space-between;align-items:end;gap:20px;margin-bottom:22px}.kicker{font:.72rem "DM Mono",monospace;color:var(--mint);text-transform:uppercase;letter-spacing:.14em}.section-title{font-size:clamp(1.7rem,3vw,2.35rem);letter-spacing:-.055em;line-height:1.15;margin:7px 0 0}.section-desc{color:var(--muted);max-width:460px;font-size:.9rem;margin:0}
+.skills-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.skillbox{padding:18px;border:1px solid var(--line);border-radius:10px;background:linear-gradient(145deg,rgba(255,255,255,.035),rgba(255,255,255,.012))}.skillbox .symbol{font-size:1.2rem;color:var(--mint)}.skillbox h3{margin:9px 0 10px;font-size:.95rem}.tags{display:flex;gap:7px;flex-wrap:wrap}.tag{font-size:.72rem;color:#c0cee2;border:1px solid #2a3b53;background:#0b1321;border-radius:5px;padding:4px 7px}
+.project-grid{display:grid;grid-template-columns:1.15fr 1fr 1fr;gap:14px}.project{background:linear-gradient(145deg,#111c2d,#0d1421);border:1px solid var(--line);border-radius:13px;padding:21px;display:flex;flex-direction:column;min-height:300px;transition:transform .2s,border-color .2s}.project:hover{transform:translateY(-4px);border-color:#4b827a}.project.featured{border-color:#397b70;background:linear-gradient(145deg,rgba(43,116,101,.18),#101827 65%)}.project-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:16px}.project-icon{width:42px;height:42px;display:grid;place-items:center;background:#1c3040;border:1px solid #315a61;border-radius:10px;color:var(--mint);font-size:1.2rem}.project-label{font: .66rem "DM Mono",monospace;color:var(--mint);border:1px solid #2e6157;padding:5px 8px;border-radius:5px}.project h3{font-size:1.08rem;line-height:1.35;margin:0 0 5px}.project .stack{font:.7rem "DM Mono",monospace;color:var(--blue);margin-bottom:13px}.project p,.project li{font-size:.83rem;color:var(--muted)}.project ul{padding-left:18px;margin:0 0 18px}.project li{margin:5px 0}.project-link{margin-top:auto;padding-top:12px;border-top:1px solid var(--line);font-weight:800;font-size:.82rem;color:var(--mint)}
+.experience-layout{display:grid;grid-template-columns:1fr .7fr;gap:34px}.timeline{border-left:1px solid #30435b;margin-left:7px}.job{padding:0 0 25px 24px;position:relative}.job:before{content:"";position:absolute;width:9px;height:9px;left:-5px;top:8px;border-radius:50%;background:var(--mint);box-shadow:0 0 0 5px var(--bg)}.job h3{margin:0;font-size:1rem}.job .company{color:var(--blue);font-size:.84rem;font-weight:700}.job .date{color:#7186a3;font: .7rem "DM Mono",monospace;margin-top:4px}.job p{color:var(--muted);font-size:.84rem;margin:8px 0 0}
+.side-card{border:1px solid var(--line);border-radius:12px;padding:21px;background:rgba(255,255,255,.025);margin-bottom:14px}.side-card h3{font-size:1rem;margin:0 0 5px}.side-card p{font-size:.82rem;color:var(--muted);margin:3px 0}.distinction{display:inline-block;margin-top:8px;color:var(--mint);font-size:.72rem;border:1px solid #2a6558;border-radius:5px;padding:4px 8px}
+.cert-list{padding-left:17px;color:var(--muted);font-size:.82rem}.cert-list li{margin:9px 0}
+.contact-panel{display:flex;justify-content:space-between;align-items:center;gap:25px;padding:30px;border:1px solid #2a514d;border-radius:14px;background:radial-gradient(ellipse at 100% 0%,rgba(99,245,200,.1),transparent 45%),#101827}.contact-panel h2{font-size:clamp(1.6rem,3vw,2.2rem);letter-spacing:-.05em;margin:6px 0}.contact-panel p{color:var(--muted);margin:0;font-size:.9rem}.contact-links{display:flex;gap:10px;flex-wrap:wrap}
+footer{border-top:1px solid var(--line);margin-top:45px;padding:22px 0;color:var(--muted);font-size:.78rem}.footer-row{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}.footer-row strong{color:var(--text)}
+@media(max-width:900px){.hero-grid{grid-template-columns:1fr;gap:35px}.terminal{transform:none}.skills-grid{grid-template-columns:repeat(2,1fr)}.project-grid{grid-template-columns:1fr 1fr}.project.featured{grid-column:1/-1}.experience-layout{grid-template-columns:1fr}.section-top{align-items:start;flex-direction:column}}
+@media(max-width:560px){nav{padding:15px 0;align-items:flex-start;flex-direction:column}.navlinks{gap:12px}.hero{padding:50px 0 35px}.skills-grid,.project-grid{grid-template-columns:1fr}.project.featured{grid-column:auto}.metrics{grid-template-columns:1fr 1fr 1fr;gap:7px}.metric{padding:10px}.contact-panel{align-items:flex-start;flex-direction:column;padding:22px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important}}
+</style>
+</head>
+<body>
+<header><nav class="wrap">
+  <a class="logo" href="#home">SINDHIYA<span style="color:var(--mint)">.</span><b>QA</b></a>
+  <div class="navlinks"><a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#experience">Experience</a><a href="#education">Education</a><a href="#contact">Contact</a></div>
+</nav></header>
+<main>
+<section class="hero" id="home"><div class="wrap hero-grid">
+  <div>
+    <div class="status"><span class="pulse"></span> OPEN TO QA OPPORTUNITIES</div>
+    <p class="eyebrow" style="margin-top:26px">QUALITY IS NOT AN ACCIDENT</p>
+    <h1>Hi, I'm<br><span>Sindhiya A.</span></h1>
+    <p class="role">Junior QA Engineer · Manual & Automation Testing</p>
+    <p class="intro">I explore how software behaves, find what breaks, and build repeatable tests to help products work better. My toolkit includes Selenium WebDriver, Python, Pytest, Postman, and Jira.</p>
+    <div class="actions"><a class="btn primary" href="#projects">Explore my work ↘</a><a class="btn ghost" href="mailto:sindhiyaa41@gmail.com">Let's connect ↗</a></div>
+    <div class="metrics">
+      <div class="metric"><strong>QA</strong><span>Manual testing</span></div>
+      <div class="metric"><strong>Python</strong><span>Automation stack</span></div>
+      <div class="metric"><strong>POM</strong><span>Framework design</span></div>
+    </div>
+  </div>
+  <div class="terminal" aria-label="Decorative test automation terminal">
+    <div class="terminal-head"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span style="margin-left:8px">qa_test_run.py</span></div>
+    <div class="terminal-body">
+      <div><span class="prompt">$</span> pytest tests/ --alluredir=reports/</div>
+      <div><span class="key">suite</span> = <span class="value">"AutomationExercise"</span></div>
+      <div><span class="key">browser</span> = <span class="value">"Chrome"</span></div>
+      <div style="margin-top:12px"><span class="ok">✓</span> test_user_login</div>
+      <div><span class="ok">✓</span> test_product_search</div>
+      <div><span class="ok">✓</span> test_cart_operations</div>
+      <div><span class="ok">✓</span> test_checkout_flow</div>
+      <div style="margin-top:13px;color:var(--mint)">Process finished with test results.</div>
+    </div>
+    <div class="terminal-note">AUTOMATION MINDSET <span style="float:right;color:var(--mint)">● READY</span></div>
+  </div>
+</div></section>
+
+<section id="about"><div class="wrap">
+  <div class="section-top"><div><div class="kicker">01 / ABOUT</div><h2 class="section-title">Curious tester. Quality-first mindset.</h2></div><p class="section-desc">I combine structured test thinking with practical automation to help identify issues early and communicate them clearly.</p></div>
+  <p style="max-width:850px;color:var(--muted)">I am an MCA graduate with First Class with Distinction and internship experience in software testing. I have worked with functional, regression, smoke, and UI testing, created test cases, reported defects, performed API checks in Postman, and developed a Selenium-Python-Pytest automation project. I enjoy learning how applications behave from a user's point of view as well as behind the scenes.</p>
+</div></section>
+
+<section id="skills"><div class="wrap">
+  <div class="section-top"><div><div class="kicker">02 / TOOLKIT</div><h2 class="section-title">Skills I bring to the test</h2></div><p class="section-desc">A practical toolkit across manual QA, browser automation, APIs, and collaboration.</p></div>
+  <div class="skills-grid">
+    <div class="skillbox"><div class="symbol">◈</div><h3>Manual QA</h3><div class="tags"><span class="tag">Functional</span><span class="tag">Regression</span><span class="tag">Smoke</span><span class="tag">UI</span><span class="tag">Test cases</span><span class="tag">Bug reports</span></div></div>
+    <div class="skillbox"><div class="symbol">⌘</div><h3>Automation</h3><div class="tags"><span class="tag">Python</span><span class="tag">Selenium</span><span class="tag">Pytest</span><span class="tag">POM</span><span class="tag">Explicit waits</span><span class="tag">Fixtures</span></div></div>
+    <div class="skillbox"><div class="symbol">↔</div><h3>API & Data</h3><div class="tags"><span class="tag">Postman</span><span class="tag">REST API basics</span><span class="tag">SQL</span><span class="tag">MySQL</span><span class="tag">JSON</span></div></div>
+    <div class="skillbox"><div class="symbol">⚙</div><h3>Tools & Process</h3><div class="tags"><span class="tag">Jira</span><span class="tag">Git</span><span class="tag">GitHub</span><span class="tag">Allure</span><span class="tag">SDLC/STLC</span><span class="tag">Agile</span><span class="tag">Jenkins basic</span><span class="tag">JMeter basic</span></div></div>
+  </div>
+</div></section>
+
+<section id="projects"><div class="wrap">
+  <div class="section-top"><div><div class="kicker">03 / SELECTED WORK</div><h2 class="section-title">Projects with a purpose</h2></div><p class="section-desc">Hands-on work that demonstrates automation structure, application logic, and problem-solving.</p></div>
+  <div class="project-grid">
+    <article class="project featured">
+      <div class="project-top"><div class="project-icon">⌘</div><span class="project-label">FEATURED PROJECT</span></div>
+      <h3>AutomationExercise Test Framework</h3><div class="stack">PYTHON / SELENIUM / PYTEST / ALLURE</div>
+      <p>A reusable UI automation framework built around the Page Object Model.</p>
+      <ul><li>Automated registration, login/logout, product search, cart, and checkout flows.</li><li>Used reusable page classes, fixtures, explicit waits, and JSON test data.</li><li>Integrated Allure reports and failure screenshots.</li></ul>
+      <a class="project-link" href="https://github.com/Sindhiya13/automationexercise-selenium-pytest" target="_blank" rel="noreferrer">VIEW SOURCE CODE ↗</a>
+    </article>
+    <article class="project">
+      <div class="project-top"><div class="project-icon">◉</div><span class="project-label">COLLEGE PROJECT</span></div>
+      <h3>Smart Voice Assistant Using NLP</h3><div class="stack">PYTHON / NLP</div>
+      <p>A voice assistant designed to respond to supported user queries.</p>
+      <ul><li>Applied NLP concepts to process queries.</li><li>Designed to answer supported queries offline.</li></ul>
+      <a class="project-link" href="https://github.com/Sindhiya13" target="_blank" rel="noreferrer">MORE ON GITHUB ↗</a>
+    </article>
+    <article class="project">
+      <div class="project-top"><div class="project-icon">▣</div><span class="project-label">WEB APPLICATION</span></div>
+      <h3>Photography Booking System</h3><div class="stack">PYTHON / FLASK / MYSQL</div>
+      <p>A web application for managing photography portfolios and booking workflows.</p>
+      <ul><li>Implemented portfolio uploads and admin approvals.</li><li>Built booking, login, and profile update functionality.</li></ul>
+      <a class="project-link" href="https://github.com/Sindhiya13" target="_blank" rel="noreferrer">MORE ON GITHUB ↗</a>
+    </article>
+  </div>
+</div></section>
+
+<section id="experience"><div class="wrap">
+  <div class="section-top"><div><div class="kicker">04 / JOURNEY</div><h2 class="section-title">Experience & education</h2></div></div>
+  <div class="experience-layout">
+    <div><h3 style="margin:0 0 22px">Experience</h3><div class="timeline">
+      <div class="job"><h3>Manual Testing Intern</h3><div class="company">Roombr Technologies Pvt. Ltd.</div><div class="date">JAN 2026 — OCT 2026</div><p>Tested web and desktop applications with functional, regression, smoke, and UI testing. Prepared test cases, reported defects, performed API testing using Postman, and developed Selenium-Python automation scripts.</p></div>
+      <div class="job"><h3>QA Intern</h3><div class="company">Testunity · Bengaluru</div><div class="date">JUL 2025 — AUG 2025</div><p>Performed functional, regression, and UI testing; designed test cases, reported defects in Jira, and conducted API testing using Postman.</p></div>
+      <div class="job"><h3>Web Development Intern</h3><div class="company">Hashtag Technologies · Coimbatore</div><div class="date">JAN 2025 — APR 2025</div><p>Developed a Photography Booking System using Flask and MySQL with portfolio uploads, admin approvals, booking workflows, login, and profile updates.</p></div>
+    </div></div>
+    <div id="education">
+      <h3 style="margin:0 0 22px">Education</h3>
+      <div class="side-card"><h3>Master of Computer Applications</h3><p>Sona College of Technology</p><p>2023 – 2025</p><span class="distinction">FIRST CLASS WITH DISTINCTION</span></div>
+      <div class="side-card"><h3>B.Sc. Mathematics</h3><p>Seethalakshmi Ramaswami College</p><p>2020 – 2023</p></div>
+      <div class="side-card"><h3>Certifications</h3><ul class="cert-list"><li>Selenium WebDriver with Python & Pytest — Udemy (July 2026)</li><li>Java Programming — NPTEL (2024)</li><li>Software Engineering Job Simulation — Goldman Sachs (Forage)</li></ul></div>
+    </div>
+  </div>
+</div></section>
+
+<section id="contact"><div class="wrap"><div class="contact-panel">
+  <div><div class="kicker">05 / CONTACT</div><h2>Let's make software more reliable.</h2><p>Open to opportunities in manual QA and junior test automation.</p></div>
+  <div class="contact-links"><a class="btn primary" href="mailto:sindhiyaa41@gmail.com">Email me ↗</a><a class="btn ghost" href="https://linkedin.com/in/contactsindhiya" target="_blank" rel="noreferrer">LinkedIn ↗</a><a class="btn ghost" href="https://github.com/Sindhiya13" target="_blank" rel="noreferrer">GitHub ↗</a></div>
+</div></div></section>
+</main>
+<footer><div class="wrap footer-row"><span>© <span id="year"></span> <strong>Sindhiya A</strong> · Built with care for quality.</span><span class="mono">TEST. LEARN. IMPROVE.</span></div></footer>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
